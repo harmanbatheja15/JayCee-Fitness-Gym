@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %} Book Free Trial {% endblock %}
+{% load static %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div id="alert-message">
+    <div class="alert alert-{{message.tags}} alert-dismissible mb-0" role="alert">
+        <strong>Success: </strong>{{ message }}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+<!-- Navbar -->
+{% include 'components/navbar.html' %}
+
+<!-- Banner -->
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("../static/images/banner.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+    </div>
+    <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                <div class="pr-12">
+                    <h1 class="text-white font-semibold text-5xl">
+                        Book Free Trial
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Welcome to The JayCee Fitness Gym & Spa. We are a fitness and training center that focuses on
+                        pushing you to
+                        your absolute limit. Book a free trial today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Form -->
+
+<div class="min-h-screen flex flex-col pt-16 pb-16 mb-6">
+
+    <p class="text-red-600 mb-8 text-center">NOTE: Free Trial is only available for 2 days, the third day, you have to pay Rs 100, or have to take our membership.</p>
+
+    <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+
+        <form method="POST" class="bg-white px-6 py-8 rounded shadow-lg text-black w-full">
+            {% csrf_token %}
+
+            <h1 class="mb-8 text-3xl text-center mt-6">Book Free Trial</h1>
+
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="photo" />
+                    <label for="imageUpload">&#x270f;</label>
+                </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview" style="background-image: url(https://kb.spinbackup.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png);">
+                    </div>
+                </div>
+            </div>
+
+            <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" autocomplete="off" name="name" required placeholder="Full Name" name="name" />
+
+            <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" autocomplete="off" name="email" required placeholder="Email" name="email" />
+
+            <input type="number" class="block border border-grey-light w-full p-3 rounded mb-6" autocomplete="off" name="phone" required placeholder="Phone Number" name="phone" />
+
+            <button type="submit" class="w-full text-center py-3 rounded bg-blue-600 rounded text-white focus:outline-none my-1 mb-5">
+                Book Now
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- Footer -->
+{% include 'components/footer.html'%}
+
+{% endblock %}

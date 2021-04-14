@@ -1,0 +1,821 @@
+{% extends 'base.html' %}
+{% block title %} Gallery {% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Navbar -->
+{% include 'components/navbar.html' %}
+
+<!-- Banner -->
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("../static/images/banner.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+    </div>
+    <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                <div class="pr-12">
+                    <h1 class="text-white font-semibold text-5xl">
+                        Gallery
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Welcome to The JayCee Fitness Gym & Spa. We are a fitness and training center that focuses on
+                        pushing you to your absolute limit. Book a free trial today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="portfolio" class="portfolio mb-24">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h1 class="text-center mt-5 mb-4">Gallery</h1>
+        </div>
+        <ul id="portfolio-flters" class="lg:d-flex xl:d-flex sm:d-block justify-content-center" data-aos="fade-up"
+            data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-yoga">Yoga</li>
+            <li data-filter=".filter-bootcamp">Bootcamp</li>
+            <li data-filter=".filter-gym-members">Gym Members</li>
+            <li data-filter=".filter-birthday-celebration">Birthday Celebration</li>
+            <li data-filter=".filter-christmas-celebration">Christmas Celebration</li>
+            <li data-filter=".filter-holi-celebration">Holi Celebration</li>
+        </ul>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image1.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image1.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image2.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image2.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image3.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Singer">
+                        <img src="{% static 'Gym Photos/image3.jpeg' %}" class="img-fluid" alt="Singer">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-gym-members">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image4.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Gym Member">
+                        <img src="{% static 'Gym Photos/image4.jpeg' %}" class="img-fluid" alt="Gym Member">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-gym-members">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image5.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Gym Member">
+                        <img src="{% static 'Gym Photos/image5.jpeg' %}" class="img-fluid" alt="Gym Member">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-christmas-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image6.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Christmas Celebration">
+                        <img src="{% static 'Gym Photos/image6.jpeg' %}" class="img-fluid" alt="Christmas Celebration">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image7.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image7.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image8.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="We Support Farmers">
+                        <img src="{% static 'Gym Photos/image8.jpeg' %}" class="img-fluid" alt="We Support Farmers">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image9.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image9.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image10.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Weight Loss">
+                        <img src="{% static 'Gym Photos/image10.jpeg' %}" class="img-fluid" alt="Weight Loss">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image11.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Singer">
+                        <img src="{% static 'Gym Photos/image11.jpeg' %}" class="img-fluid" alt="Singer">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-gym-members">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image12.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Gym Members">
+                        <img src="{% static 'Gym Photos/image12.jpeg' %}" class="img-fluid" alt="Gym Members">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image13.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image13.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image14.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image14.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image15.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image15.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image16.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image16.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image17.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image17.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image18.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image18.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image19.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image19.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image20.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image20.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image21.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image21.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image22.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image22.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image23.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image23.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image24.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image24.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image25.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image25.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image26.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Brothers">
+                        <img src="{% static 'Gym Photos/image26.jpeg' %}" class="img-fluid" alt="Brothers">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image27.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image27.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image28.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image28.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image29.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image29.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image30.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image30.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image31.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image31.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image32.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image32.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image33.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image33.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image34.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image34.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image35.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image35.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image36.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image36.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image37.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image37.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image38.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image38.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image39.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image39.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image40.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image40.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image41.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image41.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image42.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image42.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image43.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image43.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image44.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image44.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image45.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image45.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image46.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image46.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image47.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image47.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image48.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image48.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image49.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image49.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image50.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image50.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image51.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image51.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image52.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image52.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image53.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Friends">
+                        <img src="{% static 'Gym Photos/image53.jpeg' %}" class="img-fluid" alt="Friends">
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image54.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image54.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image55.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image55.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image56.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image56.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image57.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image57.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-gym-members">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image58.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Gym Members">
+                        <img src="{% static 'Gym Photos/image58.jpeg' %}" class="img-fluid" alt="Gym Members">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image59.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image59.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image60.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image60.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-christmas-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image61.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Christmas Celebration">
+                        <img src="{% static 'Gym Photos/image61.jpeg' %}" class="img-fluid" alt="Christmas Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-holi-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image62.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Holi Celebration">
+                        <img src="{% static 'Gym Photos/image62.jpeg' %}" class="img-fluid" alt="Holi Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-holi-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image63.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Holi Celebration">
+                        <img src="{% static 'Gym Photos/image63.jpeg' %}" class="img-fluid" alt="Holi Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-gym-members">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image64.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Gym Members">
+                        <img src="{% static 'Gym Photos/image64.jpeg' %}" class="img-fluid" alt="Gym Members">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image65.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image65.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image66.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image66.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image67.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image67.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image68.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image68.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image69.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image69.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image70.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image70.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image71.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image71.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image72.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image72.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image73.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image73.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image74.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image74.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image75.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image75.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image76.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image76.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-holi-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image77.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Holi Celebration">
+                        <img src="{% static 'Gym Photos/image77.jpeg' %}" class="img-fluid" alt="Holi Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image78.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Trainers">
+                        <img src="{% static 'Gym Photos/image78.jpeg' %}" class="img-fluid" alt="Trainers">
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-birthday-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image79.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Birthday Celebration">
+                        <img src="{% static 'Gym Photos/image79.jpeg' %}" class="img-fluid" alt="Birthday Celebration">
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-holi-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image80.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Holi Celebration">
+                        <img src="{% static 'Gym Photos/image80.jpeg' %}" class="img-fluid" alt="Holi Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-holi-celebration">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image81.jpeg' %}" data-gall="portfolioGallery"
+                        class="venobox preview-link" title="Holi Celebration">
+                        <img src="{% static 'Gym Photos/image81.jpeg' %}" class="img-fluid" alt="Holi Celebration">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image82.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image82.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image83.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Friends">
+                        <img src="{% static 'Gym Photos/image83.jpeg' %}" class="img-fluid" alt="Friends">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image84.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image84.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-yoga">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image85.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Yoga">
+                        <img src="{% static 'Gym Photos/image85.jpeg' %}" class="img-fluid" alt="Yoga">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image86.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Brothers">
+                        <img src="{% static 'Gym Photos/image86.jpeg' %}" class="img-fluid" alt="Brothers">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-bootcamp">
+                <div class="portfolio-img">
+                    <a href="{% static 'Gym Photos/image87.jpeg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="Bootcamp">
+                        <img src="{% static 'Gym Photos/image87.jpeg' %}" class="img-fluid" alt="Bootcamp">
+                    </a>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Bootcamp</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+{% include 'components/footer.html' %}
+
+{% endblock %}

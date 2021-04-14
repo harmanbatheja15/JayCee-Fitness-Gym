@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %} About Us {% endblock %}
+{% load static %}
+
+{% block content %}
+
+{% include 'components/navbar.html' %}
+
+<!-- Banner -->
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("../static/images/banner.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+    </div>
+    <div class="container relative mx-auto text-over-image">
+        <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                <div class="pr-12">
+                    <h1 class="text-white font-semibold text-5xl">
+                        About Us
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Welcome to The JayCee Fitness Gym & Spa. We are a fitness and training center that focuses on
+                        pushing you to your absolute limit. Book a free trial today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Us -->
+<section class="pb-20 -mt-24">
+    <div class="container mx-auto px-4">
+
+        <div class="flex flex-wrap items-center mt-32">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                <div
+                    class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100 mt-5">
+                    <i class="fas fa-user-friends text-xl"></i>
+                </div>
+                <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                    About Us
+                </h3>
+                <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                    <!-- Let us be a part and member of JayCee Fitness Gym & Spa, located at very prime locality of Nabha with very comfortable, friendly and professional atmosphere. -->
+                    <b>JayCee Gym Fitness & Spa</b> was founded in year 2015 with a aim to help people live longer,
+                    happier and healthier. Since its birth, our gym has earned a reputation of being the best gym in
+                    Nabha, with member's fullest satisfaction.
+                </p>
+                <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                    Be it your requirement of weight gain, weight loss, muscle/body building, or any of your personal
+                    requirement for any competetion, you will love to be a member of our Gym.
+                </p>
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-10">
+                <div
+                    class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+                    <img src="{% static 'images/image5.jpg' %}" alt="" class="w-full align-middle rounded-t-lg" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+{% include 'components/footer.html' %}
+
+{% endblock %}

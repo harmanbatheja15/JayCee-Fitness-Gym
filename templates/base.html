@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="" />
+    <link rel="apple-touch-icon" sizes="76x76" href="" />
+    <link rel="stylesheet" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" />
+
+    <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>JayCee Gym | {% block title %} {% endblock %}</title>
+</head>
+
+<body class="text-gray-800 antialiased">
+
+    <!-- Topbar -->
+    <div class="bg-indigo-600 header-banner">
+        <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+            <div class="banner-container flex items-center justify-between flex-wrap">
+                <div class="w-0 flex-1 flex items-center">
+                    <p class="font-medium text-white truncate">
+                        <span class="md:inline">
+                            <i class="fas fa-dumbbell mr-2"></i> JayCee Fitness Gym & Spa
+                        </span>
+                    </p>
+                </div>
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3 mr-8">
+                    <p class="sm:-mr-2 text-white">
+                        <i class="fas fa-phone mr-1"></i> +91 8195003900 | +91 8198000174
+                    </p>
+                </div>
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3 mr-5">
+                    <p class="sm:-mr-2 text-white">
+                        <i class="fas fa-envelope mr-1"></i> jayceegym@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block content %} {% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendor/aos/aos.js' %}"></script>
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

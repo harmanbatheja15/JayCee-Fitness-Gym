@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+
+{% block content %}
+
+    {% if messages %}
+    {% for message in messages %}
+    <div id="alert-message">
+        <div class="alert alert-{{message.tags}} alert-dismissible mb-0" role="alert">
+            <strong>Success: </strong>{{ message }}
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <!-- Navbar -->
+    {% include 'components/navbar.html' %}
+
+    <main>
+
+        <!-- Banner -->
+        {% include 'components/banner.html' %}
+
+        <!-- Service Cards -->
+        {% include 'components/services card.html' %}
+
+        <!-- A Growing Gym -->
+        {% include 'components/artgym.html' %}
+
+        <!-- Trainers -->
+        {% include 'components/trainers.html' %}
+
+        <!-- Testimonials -->
+        {% include 'components/testimonials.html' %}
+
+        <!-- Membership Pricing -->
+        {% include 'components/membership price.html' %}
+        
+        <!-- Contact Us -->
+        {% include 'components/contact.html' %}
+        
+    </main>
+
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
+    
+</body>
+
+{% endblock %}

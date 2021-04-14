@@ -1,0 +1,44 @@
+{% load static %}
+
+<nav class="top-2 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" href="/">
+                JayCee Fitness Gym & Spa
+            </a>
+            <button class="cursor-pointer text-xl leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                <i class="text-white fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="lg:flex flex justify-end flex-grow items-center lg:bg-transparent lg:shadow-none rounded hidden"
+            id="example-collapse-navbar">
+            <ul class="flex flex-col lg:flex-row list-none lg:ml-auto lg:bg-transparent bg-gray-200 lg-w-100 w-4/12">
+                <li class="flex items-center">
+                    <a href="/" class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" style="transition: all 0.15s ease 0s;">
+                        Home
+                    </a>
+                </li>
+                <li class="flex items-center">
+                    <a href="{% url 'gallery' %}" class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" style="transition: all 0.15s ease 0s;">
+                        Gallery
+                    </a>
+                </li>
+                <li class="flex items-center">
+                    <a href="/#membershipPlans" class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" style="transition: all 0.15s ease 0s;">
+                        Membership Plans
+                    </a>
+                </li>
+                <li class="flex items-center">
+                    <a href="/#contactUs" class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" style="transition: all 0.15s ease 0s;">
+                        Contact Us
+                    </a>
+                </li>
+                <li class="flex items-center">
+                    <a href="{% url 'free_trial' %}" class="bg-white bg-green text-gray-800 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 mr-3 lg:mb-0 ml-3 mb-3" style="transition: all 0.15s ease 0s;">
+                        Book Free Trial
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

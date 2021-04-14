@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block title %} Basic Pricing {% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Navbar -->
+{% include 'components/navbar.html' %}
+
+<!-- Banner -->
+<div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("../static/images/banner.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+    </div>
+    <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                <div class="pr-12">
+                    <h1 class="text-white font-semibold text-5xl">
+                        Pricing
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Welcome to The JayCee Fitness Gym & Spa. We are a fitness and training center that focuses on
+                        pushing you to your absolute limit. Book a free trial today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="container mx-auto mt-10 mb-12 bg-white shadow overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+        <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4">
+            JayCee Gym Nabha
+        </h3>
+        <p class="mt-1 max-w-2xl text-sm text-gray-500">
+            <i class="fa fa-map-marker"></i>
+            JayCee Gym, Opp. College Ground, Nabha
+        </p>
+        <p class="mt-1 max-w-2xl text-sm text-gray-500">
+            <i class="fa fa-envelope"></i>
+            jayceegym@gmail.com
+        </p>
+        <p class="mt-1 max-w-2xl text-sm text-gray-500">
+            <i class="fa fa-phone"></i>
+            <span class="mr-4">+91 1212121212</span> | <span class="ml-4">+91 1212121212</span>
+        </p>
+    </div>
+    <div class="border-t border-gray-200">
+        <dl>
+
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500 mb-2">
+                    3 Months Membership for group training
+                </dt>
+                <div class="flex float-right flex-shrink-0">
+                    <p class="font-medium text-indigo-600 hover:text-indigo-500">
+                        Rs 3000
+                    </p>
+                </div>
+                <dd class="text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    Paytm or GPay on 1212121212 or transfer money in account no 1212121212 or pay us offline.
+                </dd>
+            </div>
+
+        </dl>
+    </div>
+
+    <div class="bg-white px-4 pb-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500 mb-4">
+            About This Gym
+        </dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 mb-5">
+            <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                <li class="pl-3 pr-4 py-3 flex justify-around items-center flex-wrap text-sm">
+
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="ml-2 flex-1 w-0 truncate">
+                            <img src="{% static 'images/cardio.png' %}" alt="">
+                            <p class="mt-1 ml-4">Cardio</p>
+                        </span>
+                    </div>
+                    
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/wifi.png' %}" alt="">
+                            <p class="mt-1 ml-8">WiFi<p>
+                        </span>
+                    </div>
+                    
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/music.png' %}" alt="">
+                            <p class="mt-1 ml-2">DJ & Music</p>
+                        </span>
+                    </div>
+                    
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/spinning.png' %}" alt="">
+                            <p class="mt-1 ml-4">Spinning</p>
+                        </span>
+                    </div>
+                    
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/nutritionist.png' %}" alt="">
+                            <p class="mt-1 ml-2">Nutritionist</p>
+                        </span>
+                    </div>
+
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/hiit.png' %}" alt="">
+                            <p class="mt-1 ml-8">HIIT</p>
+                        </span>
+                    </div>
+
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/air_conditioner.png' %}" alt="">
+                            <p class="mt-1">Air Conditioned</p>
+                        </span>
+                    </div>
+
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/locker.png' %}" alt="">
+                            <p class="mt-1 ml-4">Locker</p>
+                        </span>
+                    </div>
+
+                    <div class="w-0 flex-1 flex items-center m-2">
+                        <span class="flex-1 w-0 truncate">
+                            <img src="{% static 'images/changing_room.png' %}" alt="" class="p-1" style="border: 1px solid #000; border-radius: 50%;">
+                            <p class="mt-1">Changing Room</p>
+                        </span>
+                    </div>
+
+                    <!-- <div class="ml-4 flex-shrink-0">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                            Download
+                        </a>
+                    </div> -->
+
+                </li>
+            </ul>
+        </dd>
+    </div>
+    </dl>
+</div>
+</div>
+
+{% endblock %}
