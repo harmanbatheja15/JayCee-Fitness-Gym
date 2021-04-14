@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+import dotenv
+
+from dotenv import load_dotenv
+load_dotenv()
 
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
@@ -24,7 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8_x1*l$n$fxca(@yl0jt3op41^w2s)7*c)(9$5f)9rg98txt1$'
+
+dotenv_file = os.path.join(BASE_DIR, ".env")
+
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
