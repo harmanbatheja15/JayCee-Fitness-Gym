@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 dotenv_file = os.path.join(BASE_DIR, ".env")
 
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = '8_x1*l$n$fxca(@yl0jt3op41^w2s)7*c)(9$5f)9rg98txt1$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
